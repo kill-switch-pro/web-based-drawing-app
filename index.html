@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>drawing board</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <p id="tou"></p>
+  <canvas id="can" ontouchmove="draw(event)" ontouchstart="start(event)" ontouchend="finished()"></canvas>
+  
+  <input type="color" onchange="color()" id="col">
+  
+  <!--<input type="button" value="clean" onclick="erase()" id="erase"> 
+  <input type="button" value="paint" onclick="paint()" id="paint"> 
+-->
+<div class="lineWidTT" onclick="ltt()">  <b> brush </b>
+ <span class="lineWidTTT">
+   set brush width :
+  <input type="range" ontouchmove="lineWid()" onchange="lineWid()" id="wid" min="0" max="300">
+ <p id="linv"></p>
+ </span>
+</div>
+
+<div class="eraserWidTT" onclick="ett()"> <b>eraser</b> 
+  <span class="eraserWidTTT">
+    set eraser width :
+  <input type="range"  ontouchmove="eraseWid()" onchange="eraseWid()" id="eawid" min="0" max="300">
+  <p id="eav"></p>
+  </span>
+</div>
+  <script src="learn.js"></script>
+</body>
+</html>
